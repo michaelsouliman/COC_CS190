@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uppercase</title>
+<script>
+function uppercase(str)
+{
+  str[0].toUpperCase();
+  for(var i=0; i <str.length; i++)
+  {
+      if(str[i] == ' ')
+      {
+					var nextChar = i+1;
+					str[nextChar].toUpperCase();
+      }
+  }
+	
+	document.write(str);
+}
+</script>
+</head>
+<body>
+ <script>
+ uppercase("I hate it here.");
+ </script>
+</body>
+</html>
