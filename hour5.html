@@ -2,24 +2,22 @@
 <html>
 <head>
 <title>Uppercase</title>
-<script>
-function uppercase(str)
-{
-	str = str.split(" ");
-
-    for (var i = 0; i < str.length; i++) 
-    {
-        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
-    }
-
-	document.write(str.join(" "));
-}
-</script>
+	<script>
+	function uppercase(str)
+	{
+		str = str.split(" ");
+    	for (var i = 0; i < str.length; i++) 
+   		{
+        	str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    	}	
+		document.write(str.join(" "));
+	}
+	</script>
 </head>
 <body>
- <script>
-	 var mystring = prompt("Enter a string.");
-	 uppercase(mystring);
- </script>
+	<script>
+		var mystring = prompt("Enter a string.");
+	 	uppercase(mystring);
+ 	</script>
 </body>
 </html>
