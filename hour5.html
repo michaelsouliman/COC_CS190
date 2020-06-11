@@ -5,18 +5,14 @@
 <script>
 function uppercase(str)
 {
+	str = str.split(" ");
 
-  str[0] = str[0].toUpperCase();
-  for(var i=0; i <str.length; i++)
-  {
-      if(str[i] == ' ')
-      {
-	var nextChar = i+1;
-	str[nextChar] = str[nextChar].toUpperCase();
-      }
-  }
-	
-	document.write(str);
+    for (var i = 0; i < str.length; i++) 
+    {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+
+	document.write(str.join(" "));
 }
 </script>
 </head>
