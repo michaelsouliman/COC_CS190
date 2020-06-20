@@ -6,10 +6,10 @@
   function countListItems()
   {
     var olElement = document.getElementById("toDoList");
-    var listItems = olElement.getElementbyTagName("li");
+    var listItems = olElement.getElementsbyTagName("li");
     alert("The ordered list contains " + listItems.length + " items.");
   }
-  window.onload = countListItems();
+  window.onload = countListItems;
   </script>
   </head>
   <body>
