@@ -6,12 +6,13 @@
   function allComments()
   {
     var olElement = document.getElementsByTagName("--");
-    var all = "";
-    for(var i = 0; i < olElement.childNodes.length; i++)
+    var num = olElement.childNodes.length;
+    var all = '';
+    for(var i = 0; i < num; i++)
     {
       if(olElement.childNodes[i].nodeType == 8)
       {
-        all = all.concat(olElement.childNodes[i].nodeName);
+        all += olElement.childNodes[i].nodeValue;
       }
     }
     alert(all);
