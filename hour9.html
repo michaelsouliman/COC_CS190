@@ -3,13 +3,20 @@
 <head>
 <title>To-Do List</title>
 <script>
-  function countListItems()
+  function allComments()
   {
-    var olElement = document.getElementById("toDoList");
-    var listItems = olElement.getElementsByTagName("li");
-    alert("The ordered list contains " + listItems.length + " items.");
+    var olElement = document.getElementByTagName("--");
+    var all = "";
+    for(var i = 0; i < olElement.childNodes.length; i++)
+    {
+      if(olElement.childNodes[i].nodeType == 8)
+      {
+        all = all.concat(olElement.childNodes[i]);
+      }
+    }
+    alert(all);
   }
-  window.onload = countListItems;
+  window.onload = allComments;
   </script>
   </head>
   <body>
