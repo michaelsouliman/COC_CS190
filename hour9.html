@@ -5,14 +5,15 @@
 <script>
   function allComments()
   {
-    var olElement = document.getElementsByTagName("body");
-    var num = olElement.childNodes.length;
+    var olElement = document.getElementById("myBody");
+    var comElements = olElement.getElementsByTagName("li");
+    var num = comElements.length;
     var all = '';
     for(var i = 0; i < num; i++)
     {
-      if(olElement.childNodes[i].nodeType == 8)
+      if(olElement.childNodes[i].nodeType == 1)
       {
-        all += olElement.childNodes[i].nodeValue;
+        all += comElements[i].nodeValue;
       }
     }
     alert(all);
@@ -20,7 +21,7 @@
   window.onload = allComments;
   </script>
   </head>
-  <body>
+  <body id="myBody">
   <h1>Things To Do</h1>
     <ol id="toDoList">
       <li>Mow the lawn</li>
