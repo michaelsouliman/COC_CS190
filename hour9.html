@@ -3,26 +3,28 @@
 <head>
 <title>To-Do List</title>
 <script>
-  function allComments()
+  function countListItems()
   {
-  var olElements = document.getElementByTagName("body");
-  var allcomments = "";
-  for(var i = 0; i< olElements.childNodes.length; i++)
-  {
-  if(olElements.childNodes[i].nodeType == 8)
-  {
-    allcomments = allcomments.concat(olElements.childNodes[i]);
+    var olElement = document.getElementById("toDoList");
+    var listItems = olElement.getElementbyTagName("li");
+    alert("The ordered list contains " + listItems.length + " items.");
   }
-    alert(allcomments);
+   window.onload = countListItems; 
   }
-  window.onload = allComments;
   </script>
   </head>
   <body>
-  <script>
+  <h1>Things To Do</h1>
+    <ol id="toDoList">
+      <li>Mow the lawn</li>
+      <li>Clean the windows</li>
+      <li>Answer your email</li>
+    </ol>
+    <p id="toDoNotes">Make sure that all of these are completed by 8pm so you can watch the game on TV!</p>
+    
   //bruh this shit sucks
   //i hate it here
   //i dont like you bitch
-  </script>
+ 
   </body>
   </html>
