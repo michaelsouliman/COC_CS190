@@ -9,7 +9,7 @@ Dog.prototype = {
   initialize: function(name) {
     this.name = name;
   },
-  function say(message) {
+  say: function(message) {
     return this.name + ': ' + message;
   }
 };
@@ -18,7 +18,7 @@ var Pug = Class.create();
 // inherit from Person class:
 Pug.prototype = Object.extend(new Dog(), {
   // redefine the speak method
-  function say(message) {
+  say: function(message) {
     return this.name + ': ' +  + 'ruff ruff ' + message;
   }
 });
