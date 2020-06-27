@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<style title="sheet1">
-		body {
-			background-color: white;
-			color: red;
-		}
-	</style>
+body {
+  background-color: white;
+  color: red;
+}
