@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dog</title>
+var Dog = Class.create();
+Dog.prototype = {
+  initialize: function(name) {
+    this.name = name;
+  },
+  say: function(message) {
+    return this.name + ': ' + message;
+  }
+};
+    
+var Pug = Class.create();
+// inherit from Person class:
+Pug.prototype = Object.extend(new Dog(), {
+  // redefine the speak method
+  say: function(message) {
+    return this.name + ': ' +  + "ruff ruff " + message;
+  }
+});
+</head>
+<body>
+var gary = new Pug('Gary');
+john.say('ACAB');
+</body>
+</html>
