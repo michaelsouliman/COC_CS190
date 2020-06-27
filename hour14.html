@@ -2,13 +2,14 @@
 <html>
 <head>
 <title>Dog</title>
+  <script src="prototype.js"></script> 
   <script>
 var Dog = Class.create();
 Dog.prototype = {
   initialize: function(name) {
     this.name = name;
   },
-  say: function(message) {
+  function say(message) {
     return this.name + ': ' + message;
   }
 };
@@ -17,7 +18,7 @@ var Pug = Class.create();
 // inherit from Person class:
 Pug.prototype = Object.extend(new Dog(), {
   // redefine the speak method
-  say: function(message) {
+  function say(message) {
     return this.name + ': ' +  + 'ruff ruff ' + message;
   }
 });
