@@ -25,7 +25,10 @@ body
 <div id="ellipse">
 </div>
   <script>
-    console.log(window.getComputedStyle(ellipse, ":border-bottom-left-radius").getPropertyValue(););
+    console.log('The top left border radius is : ' + window.getComputedStyle(ellipse, null).getPropertyValue("-webkit-border-top-left-radius"));
+    console.log('The top right border radius is : ' + window.getComputedStyle(ellipse, null).getPropertyValue("-webkit-border-top-right-radius"));
+    console.log('The bottom left border radius is : ' + window.getComputedStyle(ellipse, null).getPropertyValue("-webkit-border-bottom-left-radius"));
+    console.log('The bottom right border radius is : ' + window.getComputedStyle(ellipse, null).getPropertyValue("-webkit-border-bottom-right-radius"));
   </script>
 
 </body>
