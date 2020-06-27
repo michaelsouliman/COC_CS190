@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Dog</title>
+  <script>
 var Dog = Class.create();
 Dog.prototype = {
   initialize: function(name) {
@@ -17,12 +18,13 @@ var Pug = Class.create();
 Pug.prototype = Object.extend(new Dog(), {
   // redefine the speak method
   say: function(message) {
-    return this.name + ': ' +  + "ruff ruff " + message;
+    return this.name + ': ' +  + 'ruff ruff ' + message;
   }
 });
+  </script>
 </head>
 <body>
 var gary = new Pug('Gary');
-john.say('ACAB');
+document.write(john.say('ACAB'));
 </body>
 </html>
