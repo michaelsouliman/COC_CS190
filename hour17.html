@@ -9,9 +9,6 @@ function checkfields(){
   if(($("#name").length >= 4) && ($("#email").length >= 4)){
   return($("#name").val() && $("#email").val());
   }
-  else{
-    return false;
-  }
 }
 $("#form1").submit(function(){
 if(checkfields()){
