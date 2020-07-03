@@ -10,7 +10,7 @@ function checkfields(){
 }
 $("#form1").submit(function(){
 if(checkfields()){
-$.post('test.js', $("#form1").serialize(), function(data){
+$.post('test.html', $("#form1").serialize(), function(data){
 $("#div1").html(data);
 }
 );
