@@ -6,12 +6,7 @@
 <script>
 $(document).ready(function(){
 function checkfields(){
-  if(($("#name").length < 4) && ($("#email").length < 4)){
-  }
-  else
-  {
     return($("#name").val() && $("#email").val());
-  }
 }
 $("#form1").submit(function(){
 if(checkfields()){
