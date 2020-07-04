@@ -6,7 +6,10 @@
 <script>
 window.onload = function(){
 document.getElementById("output").innerHTML = "Your Cookie Value: " + getCookie("myCookieData");
-document.getElementById("btn1").onclick = deleteCookie("myCookieData");
+document.getElementById("btn1").onclick = function(){
+  deleteCookie("myCookieData");
+  document.getElementById("output").innerHTML = "Your Cookie Value: " + getCookie("myCookieData");
+}
 }
 </script>
 </head>
@@ -14,6 +17,6 @@ document.getElementById("btn1").onclick = deleteCookie("myCookieData");
 <a href="cookietest.html">Go back to Cookie Test Page 1</a>
 <br />
 <div id="output"></div>
-<input type="button" id="btn1" value="Clear Cookies" onClick = "window.location.reload();">
+<input type="button" id="btn1" value="Clear Cookies">
 </body>
 </html>
