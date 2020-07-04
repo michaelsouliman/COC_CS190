@@ -21,7 +21,7 @@ var crumbs = document.cookie.split(';');
 for(var i = 0; i <crumbs.length; i++)
 {
 var crumb = crumbs[i].trim();
-if(crumb.indexof(nameEquals) == 0)
+if(crumb.indexOf(nameEquals) == 0)
 {
 return unescape(crumb.substring(nameEquals.length, crumb.length));
 }
