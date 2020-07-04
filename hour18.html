@@ -6,7 +6,7 @@
 <script>
 window.onload = function(){
 document.getElementById("output").innerHTML = "Your Cookie Value: " + getCookie("myCookieData");
-document.getElementById("btn1").onclick = deleteCookie("myCookieData");
+document.getElementById("btn1").onclick = deleteCookie("myCookieData") +  window.location.reload();
 }
 </script>
 </head>
