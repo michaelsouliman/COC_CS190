@@ -2,8 +2,13 @@
 <html>
 <head>
 <title>Manual Unit Testing Examples</title>
-<script src="tax.js"></script>
 <script>
+function addTax(subtotal, taxRate)
+{
+var total = subtotal * (1+(taxRate/100));
+return total;
+}
+  
 function test(amount, rate, expected)
 {
 results.total++;
