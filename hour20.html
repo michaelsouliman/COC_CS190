@@ -24,7 +24,7 @@
   <script src="angular.js"></script>
   </head>
   <body ng-app>
-  <p>Search Departments: <input type="text" placeholder="Enter search string" ng-model="searchString"></p>
+  <p>Search Departments: <input type="text" placeholder="Enter search string" ng-model="searchString.name"></p>
   <div ng-init= "departments = [
   { name: 'Sales', contact: 'Masrsh Brown'},
   { name: 'Support', contact: 'Dave Price'},
@@ -36,7 +36,7 @@
   </div>
   <div id="list-container">
   <ul>
-  <li ng-repeat="dept in departments.name | filter: searchString">{{ dept.name + " (" + dept.contact+ ")"}}</li>
+  <li ng-repeat="deptObj in departments | filter:searchString">{{ dept.name + " (" + dept.contact+ ")"}}</li>
   </ul>
   </div>
   </body>
