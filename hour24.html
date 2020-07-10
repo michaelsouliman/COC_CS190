@@ -2,33 +2,24 @@
 <html>
 <head>
 <title>Manual Unit Testing Examples</title>
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/quint-1.16.0.css">
 <script>
 function addTax(subtotal, taxRate)
 {
 var total = subtotal * (1+(taxRate/100));
 return total;
 }
-  
-function test(amount, rate, expected)
-{
-results.total++;
-var result = addTax(amount,rate);
-if(result != expected)
-{
-results.failed++;
-document.write("Expected "+ expected +", but instead got "+result + "." + <br>);
-}
-}
-var results = {total: 0, failed: 0};
-
-test(1, 10, 1.1);
-test(5,12,5.6);
-test(100, 17.5, 117.5);
-
-document.write(results.total + " tests carried out, " + results.failed + " failed, " + (results.total - results.failed) + " passed.");
 </script>
 </head>
 <body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="http://code.jquery.com/qunit/qunit-1.16.0.js"></script>
+  QUnit.test( "addTax test", function(assert){
+  assert.equal(addTax(1, 10), 1.1);
+  assert.equal(addTax(5,12), 5.6);
+  assert.equal(addTax(100,17.5), 117.5);
+  });
 </body>
 </html>
 
