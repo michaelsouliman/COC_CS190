@@ -4,13 +4,13 @@
 	<title>Banner Cycler</title>
 	<script>
 		var banners = ["banner1.jpg", "banner2.jpg", "banner3.jpg"];
-		var counter = 0;
+		var current = 0;
 		function run() {
 			setInterval(cycle, 2000);
 		}
 		function cycle() {
 			current = Math.floor(Math.random() * 2);
-			document.getElementById("banner").src = banners[counter];
+			document.getElementById("banner").src = banners[current];
 		}
 	</script>
 </head>
