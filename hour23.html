@@ -9,8 +9,7 @@
 			setInterval(cycle, 2000);
 		}
 		function cycle() {
-			counter++;
-			if(counter == banners.length) counter = 0;
+			current = Math.floor(Math.random() * 2);
 			document.getElementById("banner").src = banners[counter];
 		}
 	</script>
