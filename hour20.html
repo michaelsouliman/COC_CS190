@@ -36,7 +36,7 @@
   </div>
   <div id="list-container">
   <ul>
-  <li ng-repeat="dept in departments | filter: searchString">{{ dept.name + " (" + dept.contact+ ")"}}</li>
+  <li ng-repeat="dept in departments | filter:name:searchString">{{ dept.name + " (" + dept.contact+ ")"}}</li>
   </ul>
   </div>
   </body>
